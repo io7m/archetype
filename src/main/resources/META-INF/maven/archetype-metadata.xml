@@ -1,0 +1,84 @@
+<archetype-descriptor name="io7m-${rootArtifactId}">
+
+  <requiredProperties>
+    <requiredProperty key="description"/>
+  </requiredProperties>
+
+  <fileSets>
+    <fileSet filtered="true" packaged="false" encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>README.md</include>
+        <include>README-CHANGES.xml</include>
+        <include>README-VERSION.txt</include>
+        <include>README-LICENSE.txt</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="false" packaged="false" encoding="UTF-8">
+      <directory>src</directory>
+    </fileSet>
+  </fileSets>
+
+  <modules>
+    <module
+      id="io7m-${rootArtifactId}-core"
+      dir="io7m-__rootArtifactId__-core"
+      name="io7m-${rootArtifactId}-core">
+      <fileSets>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+          <directory>src/main/java</directory>
+        </fileSet>
+        <fileSet packaged="false" encoding="UTF-8">
+          <directory>src/main/resources</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+          <directory>src/test/java</directory>
+        </fileSet>
+        <fileSet packaged="false" encoding="UTF-8">
+          <directory>src/test/resources</directory>
+        </fileSet>
+        <fileSet filtered="false" packaged="false" encoding="UTF-8">
+          <directory>src/site</directory>
+        </fileSet>
+      </fileSets>
+    </module>
+
+    <module
+      id="io7m-${rootArtifactId}-checkstyle"
+      dir="io7m-__rootArtifactId__-checkstyle"
+      name="io7m-${rootArtifactId}-checkstyle">
+      <fileSets>
+        <fileSet packaged="false" encoding="UTF-8">
+          <directory>src/main/resources</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+          <directory>src/main/java</directory>
+        </fileSet>
+        <fileSet filtered="false" packaged="false" encoding="UTF-8">
+          <directory>src/site</directory>
+        </fileSet>
+      </fileSets>
+    </module>
+
+    <module
+      id="io7m-${rootArtifactId}-documentation"
+      dir="io7m-__rootArtifactId__-documentation"
+      name="io7m-${rootArtifactId}-documentation">
+      <fileSets>
+        <fileSet filtered="false" packaged="false" encoding="UTF-8">
+          <directory>src/main/resources</directory>
+        </fileSet>
+        <fileSet filtered="false" packaged="false" encoding="UTF-8">
+          <directory>src/main/assembly</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+          <directory>src/main/java</directory>
+        </fileSet>
+        <fileSet filtered="false" packaged="false" encoding="UTF-8">
+          <directory>src/site</directory>
+        </fileSet>
+      </fileSets>
+    </module>
+  </modules>
+
+</archetype-descriptor>
