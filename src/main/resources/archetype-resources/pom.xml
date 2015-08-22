@@ -51,13 +51,13 @@
 
   <issueManagement>
     <url>http://github.com/io7m/${artifactId}/issues</url>
-    <system>Fossil</system>
+    <system>GitHub Issues</system>
   </issueManagement>
 
   <distributionManagement>
     <site>
-      <id>io7m</id>
-      <name>io7m.github.io</name>
+      <id>GitHub</id>
+      <name>github.com</name>
       <url>http://io7m.github.io/${artifactId}</url>
     </site>
     <repository>
