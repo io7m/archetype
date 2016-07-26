@@ -13,7 +13,7 @@
   </c:release>
 
   <c:ticket-system xml:id="com.github.io7m.${rootArtifactId}">
-    <c:ticket-url>https://github.com/io7m/${rootArtifactId}/issues</c:ticket-url>
+    <c:ticket-url>https://github.com/io7m/${rootArtifactId}/issues/</c:ticket-url>
   </c:ticket-system>
 
 </c:changelog>
