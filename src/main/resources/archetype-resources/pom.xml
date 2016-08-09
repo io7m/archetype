@@ -209,7 +209,7 @@
         <plugin>
           <groupId>com.io7m.jstructural</groupId>
           <artifactId>io7m-jstructural-maven-plugin</artifactId>
-          <version>4.2.0</version>
+          <version>5.0.0</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
