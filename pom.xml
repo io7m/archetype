@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.archetype</groupId>
   <artifactId>io7m-archetype</artifactId>
-  <version>0.4.1</version>
+  <version>0.4.2</version>
 
   <packaging>jar</packaging>
   <name>io7m-archetype</name>
@@ -17,8 +17,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <siteReposDirectory>/com/io7m/archetype</siteReposDirectory>
-    <siteDocumentationDirectory>/com/io7m/archetype/io7m-archetype-documentation</siteDocumentationDirectory>
+    <siteReposDirectory>com/io7m/archetype</siteReposDirectory>
+    <siteDocumentationDirectory>com/io7m/archetype/io7m-archetype-documentation</siteDocumentationDirectory>
   </properties>
 
   <licenses>
