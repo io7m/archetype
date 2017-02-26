@@ -22,7 +22,7 @@
   <modules>
     <module
       id="com.io7m.${rootArtifactId}.core"
-      dir="__rootArtifactId__.core"
+      dir="com.io7m.__rootArtifactId__.core"
       name="com.io7m.${rootArtifactId}.core">
       <fileSets>
         <fileSet filtered="true" packaged="false" encoding="UTF-8">
@@ -39,7 +39,7 @@
 
     <module
       id="com.io7m.${rootArtifactId}.tests"
-      dir="__rootArtifactId__.tests"
+      dir="com.io7m.__rootArtifactId__.tests"
       name="com.io7m.${rootArtifactId}.tests">
       <fileSets>
         <fileSet filtered="true" packaged="false" encoding="UTF-8">
@@ -56,7 +56,7 @@
 
     <module
       id="com.io7m.${rootArtifactId}.checkstyle"
-      dir="__rootArtifactId__.checkstyle"
+      dir="com.io7m.__rootArtifactId__.checkstyle"
       name="com.io7m.${rootArtifactId}.checkstyle">
       <fileSets>
         <fileSet packaged="false" encoding="UTF-8">
@@ -73,7 +73,7 @@
 
     <module
       id="com.io7m.${rootArtifactId}.documentation"
-      dir="__rootArtifactId__.documentation"
+      dir="com.io7m.__rootArtifactId__.documentation"
       name="com.io7m.${rootArtifactId}.documentation">
       <fileSets>
         <fileSet filtered="false" packaged="false" encoding="UTF-8">
