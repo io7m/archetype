@@ -1,4 +1,4 @@
-<archetype-descriptor name="io7m-${rootArtifactId}">
+<archetype-descriptor name="com.io7m.${rootArtifactId}">
 
   <requiredProperties>
     <requiredProperty key="description"/>
@@ -21,9 +21,9 @@
 
   <modules>
     <module
-      id="io7m-${rootArtifactId}-core"
-      dir="io7m-__rootArtifactId__-core"
-      name="io7m-${rootArtifactId}-core">
+      id="com.io7m.${rootArtifactId}.core"
+      dir="__rootArtifactId__.core"
+      name="com.io7m.${rootArtifactId}.core">
       <fileSets>
         <fileSet filtered="true" packaged="false" encoding="UTF-8">
           <directory>src/main/java</directory>
@@ -31,6 +31,17 @@
         <fileSet packaged="false" encoding="UTF-8">
           <directory>src/main/resources</directory>
         </fileSet>
+        <fileSet filtered="false" packaged="false" encoding="UTF-8">
+          <directory>src/site</directory>
+        </fileSet>
+      </fileSets>
+    </module>
+
+    <module
+      id="com.io7m.${rootArtifactId}.tests"
+      dir="__rootArtifactId__.tests"
+      name="com.io7m.${rootArtifactId}.tests">
+      <fileSets>
         <fileSet filtered="true" packaged="false" encoding="UTF-8">
           <directory>src/test/java</directory>
         </fileSet>
@@ -44,9 +55,9 @@
     </module>
 
     <module
-      id="io7m-${rootArtifactId}-checkstyle"
-      dir="io7m-__rootArtifactId__-checkstyle"
-      name="io7m-${rootArtifactId}-checkstyle">
+      id="com.io7m.${rootArtifactId}.checkstyle"
+      dir="__rootArtifactId__.checkstyle"
+      name="com.io7m.${rootArtifactId}.checkstyle">
       <fileSets>
         <fileSet packaged="false" encoding="UTF-8">
           <directory>src/main/resources</directory>
@@ -61,9 +72,9 @@
     </module>
 
     <module
-      id="io7m-${rootArtifactId}-documentation"
-      dir="io7m-__rootArtifactId__-documentation"
-      name="io7m-${rootArtifactId}-documentation">
+      id="com.io7m.${rootArtifactId}.documentation"
+      dir="__rootArtifactId__.documentation"
+      name="com.io7m.${rootArtifactId}.documentation">
       <fileSets>
         <fileSet filtered="false" packaged="false" encoding="UTF-8">
           <directory>src/main/resources</directory>
