@@ -6,26 +6,29 @@
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>${groupId}</groupId>
-  <artifactId>io7m-${artifactId}</artifactId>
+  <artifactId>com.io7m.${rootArtifactId}</artifactId>
   <version>${version}</version>
 
   <packaging>pom</packaging>
-  <name>io7m-${artifactId}</name>
+  <name>com.io7m.${rootArtifactId}</name>
   <description>${description}</description>
-  <url>http://github.com/io7m/${artifactId}</url>
+  <url>http://github.com/io7m/${rootArtifactId}</url>
 
   <modules>
-    <module>io7m-${artifactId}-checkstyle</module>
-    <module>io7m-${artifactId}-core</module>
-    <module>io7m-${artifactId}-documentation</module>
+    <module>${rootArtifactId}.checkstyle</module>
+    <module>${rootArtifactId}.core</module>
+    <module>${rootArtifactId}.documentation</module>
+    <module>${rootArtifactId}.tests</module>
   </modules>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <siteReposDirectory>com/io7m/${artifactId}</siteReposDirectory>
-    <siteDocumentationDirectory>com/io7m/${artifactId}/io7m-${artifactId}-documentation</siteDocumentationDirectory>
+    <siteReposDirectory>com/io7m/${rootArtifactId}</siteReposDirectory>
+    <siteDocumentationDirectory>com/io7m/${rootArtifactId}/com.io7m.${rootArtifactId}.documentation</siteDocumentationDirectory>
   </properties>
+
+  <inceptionYear>2017</inceptionYear>
 
   <licenses>
     <license>
@@ -35,9 +38,9 @@
   </licenses>
 
   <scm>
-    <url>https://github.com/io7m/${artifactId}</url>
-    <connection>scm:git:https://github.com/io7m/${artifactId}</connection>
-    <developerConnection>scm:git:https://github.com/io7m/${artifactId}</developerConnection>
+    <url>https://github.com/io7m/${rootArtifactId}</url>
+    <connection>scm:git:https://github.com/io7m/${rootArtifactId}</connection>
+    <developerConnection>scm:git:https://github.com/io7m/${rootArtifactId}</developerConnection>
   </scm>
 
   <developers>
@@ -50,7 +53,7 @@
   </developers>
 
   <issueManagement>
-    <url>http://github.com/io7m/${artifactId}/issues</url>
+    <url>http://github.com/io7m/${rootArtifactId}/issues</url>
     <system>GitHub Issues</system>
   </issueManagement>
 
@@ -58,7 +61,7 @@
     <site>
       <id>GitHub</id>
       <name>GitHub</name>
-      <url>http://io7m.github.io/${artifactId}</url>
+      <url>http://io7m.github.io/${rootArtifactId}</url>
     </site>
     <repository>
       <id>sonatype-nexus-staging</id>
@@ -68,7 +71,7 @@
 
   <ciManagement>
     <system>Travis CI</system>
-    <url>https://travis-ci.org/io7m/${artifactId}</url>
+    <url>https://travis-ci.org/io7m/${rootArtifactId}</url>
   </ciManagement>
 
   <prerequisites>
@@ -179,7 +182,7 @@
           <dependencies>
             <dependency>
               <groupId>${project.groupId}</groupId>
-              <artifactId>io7m-${rootArtifactId}-checkstyle</artifactId>
+              <artifactId>com.io7m.${rootArtifactId}.checkstyle</artifactId>
               <version>${project.version}</version>
             </dependency>
           </dependencies>
@@ -204,12 +207,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
-          <version>2.6</version>
+          <version>3.0.0</version>
         </plugin>
         <plugin>
           <groupId>com.io7m.kstructural</groupId>
           <artifactId>io7m-kstructural-maven-plugin</artifactId>
-          <version>0.3.0</version>
+          <version>0.3.1</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
@@ -246,10 +249,10 @@
               <configuration>
                 <archive>
                   <manifestEntries>
-                    <Specification-Title>${project.name}</Specification-Title>
+                    <Specification-Title>${project.artifactId}</Specification-Title>
                     <Specification-Version>${project.version}</Specification-Version>
                     <Specification-Vendor>io7m.com</Specification-Vendor>
-                    <Implementation-Title>${project.name}</Implementation-Title>
+                    <Implementation-Title>${project.artifactId}</Implementation-Title>
                     <Implementation-Version>${project.version}</Implementation-Version>
                     <Implementation-Vendor>io7m.com</Implementation-Vendor>
                     <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
@@ -271,10 +274,10 @@
               <configuration>
                 <archive>
                   <manifestEntries>
-                    <Specification-Title>${project.name}</Specification-Title>
+                    <Specification-Title>${project.artifactId}</Specification-Title>
                     <Specification-Version>${project.version}</Specification-Version>
                     <Specification-Vendor>io7m.com</Specification-Vendor>
-                    <Implementation-Title>${project.name}</Implementation-Title>
+                    <Implementation-Title>${project.artifactId}</Implementation-Title>
                     <Implementation-Version>${project.version}</Implementation-Version>
                     <Implementation-Vendor>io7m.com</Implementation-Vendor>
                     <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
@@ -327,10 +330,10 @@
             <configuration>
               <archive>
                 <manifestEntries>
-                  <Specification-Title>${project.name}</Specification-Title>
+                  <Specification-Title>${project.artifactId}</Specification-Title>
                   <Specification-Version>${project.version}</Specification-Version>
                   <Specification-Vendor>io7m.com</Specification-Vendor>
-                  <Implementation-Title>${project.name}</Implementation-Title>
+                  <Implementation-Title>${project.artifactId}</Implementation-Title>
                   <Implementation-Version>${project.version}</Implementation-Version>
                   <Implementation-Vendor>io7m.com</Implementation-Vendor>
                   <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
@@ -357,10 +360,10 @@
               <bottom><![CDATA[Copyright &#169; {currentYear} &lt;code@io7m.com&gt; http://io7m.com]]></bottom>
               <archive>
                 <manifestEntries>
-                  <Specification-Title>${project.name}</Specification-Title>
+                  <Specification-Title>${project.artifactId}</Specification-Title>
                   <Specification-Version>${project.version}</Specification-Version>
                   <Specification-Vendor>io7m.com</Specification-Vendor>
-                  <Implementation-Title>${project.name}</Implementation-Title>
+                  <Implementation-Title>${project.artifactId}</Implementation-Title>
                   <Implementation-Version>${project.version}</Implementation-Version>
                   <Implementation-Vendor>io7m.com</Implementation-Vendor>
                   <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
@@ -379,11 +382,10 @@
         <extensions>true</extensions>
         <configuration>
           <instructions>
-            <Export-Package>com.io7m.jproperties</Export-Package>
-            <Specification-Title>${project.name}</Specification-Title>
+            <Specification-Title>${project.artifactId}</Specification-Title>
             <Specification-Version>${project.version}</Specification-Version>
             <Specification-Vendor>io7m.com</Specification-Vendor>
-            <Implementation-Title>${project.name}</Implementation-Title>
+            <Implementation-Title>${project.artifactId}</Implementation-Title>
             <Implementation-Version>${project.version}</Implementation-Version>
             <Implementation-Vendor>io7m.com</Implementation-Vendor>
             <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
