@@ -15,10 +15,6 @@
   <url>http://github.com/io7m/${rootArtifactId}</url>
 
   <modules>
-    <module>${rootArtifactId}.checkstyle</module>
-    <module>${rootArtifactId}.core</module>
-    <module>${rootArtifactId}.documentation</module>
-    <module>${rootArtifactId}.tests</module>
   </modules>
 
   <properties>
