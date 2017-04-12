@@ -73,6 +73,10 @@
       <id>sonatype-nexus-staging</id>
       <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
+    <snapshotRepository>
+      <id>sonatype-nexus-snapshots</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+    </snapshotRepository>
   </distributionManagement>
 
   <ciManagement>
@@ -88,7 +92,7 @@
     <dependencies>
       <dependency>
         <groupId>com.io7m.jnull</groupId>
-        <artifactId>io7m-jnull-core</artifactId>
+        <artifactId>com.io7m.jnull.core</artifactId>
         <version>[1.0.0, 2.0.0)</version>
       </dependency>
 
